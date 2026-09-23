@@ -1,0 +1,239 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  overflow-x: hidden;
+
+  background:
+    radial-gradient(circle at top, #3b0b46 0%, #18001f 45%, #020b18 100%);
+
+  min-height: 100vh;
+}
+
+
+/* =========================
+   BACKGROUND STARS
+========================= */
+
+.stars {
+  position: fixed;
+  inset: 0;
+
+  background-image:
+    radial-gradient(circle, rgba(255,255,255,.8) 1px, transparent 1px);
+
+  background-size: 55px 55px;
+
+  opacity: .25;
+
+  pointer-events: none;
+
+  z-index: 0;
+}
+
+
+/* =========================
+   FLOATING EMOJIS
+========================= */
+
+.floating {
+  position: fixed;
+  inset: 0;
+
+  overflow: hidden;
+
+  pointer-events: none;
+
+  z-index: 1;
+}
+
+.floating span {
+  position: absolute;
+
+  font-size: 20px;
+
+  animation: float 8s linear infinite;
+
+  opacity: .8;
+}
+
+.floating span:nth-child(1) {
+  left: 5%;
+  top: 10%;
+}
+
+.floating span:nth-child(2) {
+  left: 18%;
+  top: 70%;
+  animation-delay: 1s;
+}
+
+.floating span:nth-child(3) {
+  left: 35%;
+  top: 15%;
+  animation-delay: 2s;
+}
+
+.floating span:nth-child(4) {
+  left: 50%;
+  top: 80%;
+  animation-delay: 3s;
+}
+
+.floating span:nth-child(5) {
+  left: 65%;
+  top: 20%;
+  animation-delay: 4s;
+}
+
+.floating span:nth-child(6) {
+  left: 78%;
+  top: 65%;
+  animation-delay: 5s;
+}
+
+.floating span:nth-child(7) {
+  left: 90%;
+  top: 30%;
+  animation-delay: 2s;
+}
+
+.floating span:nth-child(8) {
+  left: 45%;
+  top: 45%;
+  animation-delay: 4s;
+}
+
+.floating span:nth-child(9) {
+  left: 10%;
+  top: 40%;
+  animation-delay: 6s;
+}
+
+.floating span:nth-child(10) {
+  left: 85%;
+  top: 85%;
+  animation-delay: 3s;
+}
+
+@keyframes float {
+
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-35px) rotate(15deg);
+  }
+
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+main {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+
+  min-height: 100vh;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  padding: 25px 15px;
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.card {
+  width: min(92vw, 420px);
+
+  min-height: 650px;
+
+  padding: 45px 25px 35px;
+
+  border-radius: 32px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.12),
+      rgba(255,255,255,.04)
+    );
+
+  border: 1px solid rgba(255,255,255,.22);
+
+  box-shadow:
+    0 20px 60px rgba(0,0,0,.45),
+    inset 0 1px 0 rgba(255,255,255,.1);
+
+  backdrop-filter: blur(14px);
+
+  -webkit-backdrop-filter: blur(14px);
+
+  text-align: center;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+
+/* =========================
+   IMPORTANT SCREEN FIX
+========================= */
+
+.card.hidden {
+  display: none !important;
+}
+
+.card:not(.hidden) {
+  display: flex !important;
+}
+
+
+/* =========================
+   MOON
+========================= */
+
+.moon {
+  font-size: 55px;
+
+  margin-bottom: 15px;
+
+  filter: drop-shadow(
+    0 0 
