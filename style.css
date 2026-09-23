@@ -215,5 +215,15 @@ button {
   width: min(90%, 420px);
   margin: 0 auto;
 }
+  /* SCREEN CONTROL FIX */
+
+.card.hidden {
+  display: none !important;
+}
+
+.card:not(.hidden) {
+  display: flex !important;
+  flex-direction: column;
+  }
 
  
