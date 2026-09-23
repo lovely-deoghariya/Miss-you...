@@ -205,5 +205,15 @@ button {
       #ee429d,
       #7654f3
     );
+  /* Hide all next screens */
+.hidden {
+  display: none !important;
+}
+
+/* Show only one card at a time */
+.card {
+  width: min(90%, 420px);
+  margin: 0 auto;
+}
 
  
